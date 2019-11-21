@@ -24,7 +24,7 @@ app.get('/fibonacci/:n', (req, res) => {
 app.get('/info', (_req, res) => {
   res.json({
     name: info.name,
-    version: info.version
+    version: info.version,
   });
 });
 
