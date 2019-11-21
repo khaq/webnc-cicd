@@ -5,7 +5,14 @@
   "repository": "git@github.com:khaq/webnc-cicd.git",
   "author": "Kha Do <kha.do@quoine.com>",
   "license": "MIT",
+  "scripts": {
+    "start": "node app.js",
+    "test": "mocha ./tests --recursive"
+  },
   "dependencies": {
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "mocha": "^6.2.2"
   }
 }
