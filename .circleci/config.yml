@@ -28,6 +28,8 @@ jobs:
       - run: yarn test
 
   deploy:
+    machine:
+      - enabled: true
     environment:
       - HEROKU_APP_NAME: webnc-cicd
     steps:
