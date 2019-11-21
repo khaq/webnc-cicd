@@ -1,7 +1,10 @@
 const express = require('express');
+const fs = require('fs');
 const fibonacci = require('./fibonacci');
 
 const app = express();
+
+const info = JSON.parse(fs.readFileSync('./package.json'));
 
 app.get('/', (_req, res) => {
   res.json({
@@ -15,6 +18,13 @@ app.get('/fibonacci/:n', (req, res) => {
   res.json({
     n,
     result,
+  });
+});
+
+app.get('/info', (_req, res) => {
+  res.json({
+    name: info.name,
+    version: info.version
   });
 });
 
