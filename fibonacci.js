@@ -5,5 +5,12 @@ module.exports = exports = function fibonacci(n) {
   if (n === 1) {
     return 1;
   }
-  return fibonacci(n - 1) + fibonacci(n - 2);
+  let n1 = 0, n2 = 1;
+  let result = 0;
+  for (let i = 2; i <= n; i++) {
+    result = n1 + n2;
+    n1 = n2;
+    n2 = result;
+  }
+  return result;
 };
